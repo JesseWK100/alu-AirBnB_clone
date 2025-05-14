@@ -15,7 +15,7 @@ The command interpreter (`console.py`) accepts commands to create, show, update,
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/<your-organization>/alu-AirBnB_clone.git
+   git clone https://github.com/JesseWK100/alu-AirBnB_clone.git
    cd alu-AirBnB_clone
    ```
 
