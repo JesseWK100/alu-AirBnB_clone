@@ -1,31 +1,20 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
-Unittest for <models.amenity>.py
+Unittest for Amenity class.
 """
+
 import unittest
-import <models.amenity>
+from models.amenity import Amenity
+from datetime import datetime
 
+class TestAmenity(unittest.TestCase):
+    """
+    Tests for the Amenity class.
+    """
 
-class Test<Amenity>(unittest.TestCase):
-    """Test cases for Amenity."""
-
-    def setUp(self):
-        self.obj = <models.amenity>.<Amenity>()
-
-    def test_docstrings(self):
-        # Module docstring
-        self.assertIsNotNone(<models.amenity>.__doc__)
-        # Class docstring
-        self.assertIsNotNone(<models.amenity>.<Amenity>.__doc__)
-        # (Optional) Function docstrings
-
-    def test_instance_attributes(self):
-        self.assertTrue(hasattr(self.obj, 'id'))
-        self.assertTrue(hasattr(self.obj, 'created_at'))
-        self.assertTrue(hasattr(self.obj, 'updated_at'))
-
-    # Add more tests for methods, serialization, updates, etc.
-
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_instance_creation(self):
+        """Test instance creation and attributes."""
+        model = Amenity()
+        self.assertIsInstance(model, Amenity)
+        self.assertIsInstance(model.id, str)
+        self.assertIsInstance(model.created_at, datetime)
