@@ -7,6 +7,7 @@ Defines the BaseModel class that will serve as the foundation for other models.
 from datetime import datetime
 import uuid
 
+
 class BaseModel:
     """
     Defines common attributes/methods for other classes.
