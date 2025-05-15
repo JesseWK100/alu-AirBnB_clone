@@ -1,33 +1,28 @@
 #!/usr/bin/env python3
 """
-Unittest for models.city.py
+Unittest for models.state
 """
 import unittest
-import models.city
+from models.state import State
 
 
-class Test City(unittest.TestCase):
-    """Test cases for City."""
+class TestState(unittest.TestCase):
+    """Test cases for State class."""
 
     def setUp(self):
-        """Create a new instance for each test."""
-        self.obj = models.city.City()
+        self.obj = State()
 
     def test_docstrings(self):
-        """All modules, classes, and functions have docstrings."""
-        # Module docstring
-        self.assertIsNotNone(models.city.__doc__)
-        # Class docstring
-        self.assertIsNotNone(models.city.City.__doc__)
-        # (Optional) Function docstrings
+        self.assertIsNotNone(State.__doc__)
+        self.assertIsNotNone(State.__init__.__doc__)
 
-    def test_instance_attributes(self):
-        """Test that the object has expected default attributes."""
-        self.assertTrue(hasattr(self.obj, 'id'))
-        self.assertTrue(hasattr(self.obj, 'created_at'))
-        self.assertTrue(hasattr(self.obj, 'updated_at'))
+    def test_attributes(self):
+        self.assertTrue(hasattr(self.obj, 'name'))
+        self.assertEqual(self.obj.name, '')
 
-    # Add more tests for methods, serialization, updates, etc.
+    def test_inheritance(self):
+        from models.base_model import BaseModel
+        self.assertIsInstance(self.obj, BaseModel)
 
 
 if __name__ == '__main__':
