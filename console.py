@@ -161,6 +161,21 @@ class HBNBCommand(cmd.Cmd):
         setattr(obj, attr_name, attr_value)
         obj.save()
 
+    def do_count(self, arg):
+        """
+        Count the number of instances of a specific class.
+        Usage: count <class_name>
+        """
+        if not arg:
+            print("** class name missing **")
+            return
+        if arg not in classes:
+            print("** class doesn't exist **")
+            return
+
+        count = sum(1 for key in storage.all() if key.startswith(f"{arg}."))
+        print(count)
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
