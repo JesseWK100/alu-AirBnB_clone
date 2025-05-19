@@ -1,11 +1,12 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/python3
+"""Defines the Amenity class."""
 from models.base_model import BaseModel
 
-class Amenity(BaseModel):
-    """Class representing an amenity."""
 
-    def __init__(self, *args, **kwargs):
-        """Initialize a new Amenity."""
-        super().__init__(*args, **kwargs)
-        self.name = kwargs.get("name", "")
+class Amenity(BaseModel):
+    """Represent an amenity.
+    Attributes:
+        name (str): The name of the amenity.
+    """
+
+    name = ""
