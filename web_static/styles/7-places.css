@@ -1,0 +1,26 @@
+/* Style for the Places section */
+.places {
+    margin-top: 30px;
+}
+
+.places h1 {
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Style for individual place articles */
+.places article {
+    width: 390px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #FF5A5F;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.places article h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
